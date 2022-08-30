@@ -9,5 +9,10 @@ public class Main {
                                     toString because toString is already overriden */
 
 
+        //How to access all the costants
+
+        Currency[] currencies=Currency.values();  //values() it is also overridden
+        System.out.println(currencies);
+
     }
 }
