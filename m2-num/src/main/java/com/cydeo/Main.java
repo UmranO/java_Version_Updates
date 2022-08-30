@@ -19,5 +19,10 @@ public class Main {
     /*Enum can Not extend any class because it internally extends Enum Class
         that's where toString() is overriden and values() is coming from
 
-    }
-}
+        You can add variable, constructor, method in an Enum
+        You can Not put abstract method/ can't make abstract the Enum because it is final
+        You can not extend from final
+        
+*/
+
+}}
