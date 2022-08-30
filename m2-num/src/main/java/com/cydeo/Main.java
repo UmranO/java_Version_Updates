@@ -1,18 +1,20 @@
 package com.cydeo;
 
+import static com.cydeo.Operation.*;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("How to access a constant");
 
-        Currency c=Currency.DIME;  // DIME is an object of Currency Enum
-                                   // we don't use new key word for object creation in Enum
+        Currency c = Currency.DIME;  // DIME is an object of Currency Enum
+        // we don't use new key word for object creation in Enum
         System.out.println(c);     /* when you print enum object you don't need to put
                                     toString because toString is already overriden */
 
 
         //How to access all the costants
 
-        Currency[] currencies=Currency.values();  //values() where is it coming from?
+        Currency[] currencies = Currency.values();  //values() where is it coming from?
         System.out.println(currencies);
 
 
@@ -27,7 +29,7 @@ public class Main {
         System.out.println("How to use switch-case with enums");
 
         Currency myCurrency = Currency.QUARTER;
-        switch(myCurrency){
+        switch (myCurrency) {
             case PENNY:
                 System.out.println("It is 1 cent");
                 break;
@@ -42,4 +44,30 @@ public class Main {
                 break;
         }
 
-}}
+        System.out.println("Operation Task");
+        calculate(3, 5, Operation.PLUS);
+
+        System.out.println("How top retrieve the constant value");
+        System.out.println(Currency.PENNY.getValue());
+        System.out.println(Currency.QUARTER.getValue());
+        System.out.println(Currency.QUARTER.ordinal());
+    }
+        private static void calculate(double x, double y,Operation operation){
+
+            switch (operation) {
+                case PLUS:
+                    System.out.println(x + y);
+                    break;
+                case MINUS:
+                    System.out.println(x - y);
+                    break;
+                case MULTIPLY:
+                    System.out.println(x * y);
+                    break;
+                case DIVIDE:
+                    System.out.println(x / y);
+                    break;
+            }
+
+        }
+}
