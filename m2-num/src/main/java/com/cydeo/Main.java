@@ -1,5 +1,7 @@
 package com.cydeo;
 
+import java.util.Arrays;
+
 import static com.cydeo.Operation.*;
 
 public class Main {
@@ -15,7 +17,7 @@ public class Main {
         //How to access all the costants
 
         Currency[] currencies = Currency.values();  //values() where is it coming from?
-        System.out.println(currencies);
+        System.out.println(Arrays.toString(currencies));
 
 
     /*Enum can Not extend any class because it internally extends Enum Class
@@ -27,6 +29,10 @@ public class Main {
 
 */
         System.out.println("How to use switch-case with enums");
+        System.out.println();
+        System.out.println("------------------------------------------------------------");
+        System.out.println("It writes 4 times constructor because therea are 4 objects in the Operation Enum class");
+                            // Constructor was executed for each object.
 
         Currency myCurrency = Currency.QUARTER;
         switch (myCurrency) {
