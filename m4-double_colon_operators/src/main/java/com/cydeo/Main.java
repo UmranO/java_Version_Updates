@@ -1,5 +1,7 @@
 package com.cydeo;
 
+import java.util.function.BiFunction;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -18,6 +20,10 @@ public class Main {
 
         //OR
         Calculate s4=new Calculator() :: findMultiply;
+
+        BiFunction<String, Integer, String> func  = (str,i)->str.substring(i);
+        BiFunction<String, Integer, String> func2 = String :: substring;
+
 
 
 
