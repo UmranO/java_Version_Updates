@@ -1,5 +1,6 @@
 package com.cydeo;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -17,6 +18,8 @@ public class CarTest {
 
         Function <Integer,Car> func= model-> new Car(model);
         Function <Integer,Car> func1=Car::new;
+
+       
     }
 
 }
