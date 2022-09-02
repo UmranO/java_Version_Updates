@@ -28,8 +28,16 @@ public class AppleTest {
         inventory.sort(comparing(Apple::getWeight));
         System.out.println(inventory);
 
+        //REVERSED
         inventory.sort(comparing(Apple::getWeight).reversed());
         System.out.println(inventory);
+
+        //CHAINING
+        inventory.sort(comparing(Apple::getWeight)
+                .reversed()
+                .thenComparing(Apple::getColor));
+
+
 
     }
 }
