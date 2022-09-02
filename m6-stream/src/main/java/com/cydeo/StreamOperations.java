@@ -60,5 +60,11 @@ public class StreamOperations {
                 .map(i->i*3)
                 .forEach(System.out::println);
 
+
+        list.stream()
+                .map(number->number*2)
+                .filter(i->i%3==0)
+                .forEach(System.out::println);
+
     }
 }
