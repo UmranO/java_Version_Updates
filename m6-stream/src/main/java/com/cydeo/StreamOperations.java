@@ -10,6 +10,13 @@ public class StreamOperations {
 
         list.forEach(System.out::println);
 
+        //FILTER-------------------------------------------
+
+        list.stream()
+                .filter(i->i%2==0)
+                .forEach(System.out::println);
+
+
 
 
 
