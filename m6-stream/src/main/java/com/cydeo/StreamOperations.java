@@ -46,5 +46,12 @@ public class StreamOperations {
                 .limit(1)
                 .forEach(System.out::println);
 
+        //SKIP()-----------------------------------------
+
+
+        list.stream()
+                .filter(i -> i%2==0)
+                .skip(1)
+                .forEach(System.out::println);
     }
 }
