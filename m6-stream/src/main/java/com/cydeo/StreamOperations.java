@@ -8,7 +8,8 @@ public class StreamOperations {
 
         List<Integer> list = Arrays.asList(1,2,3,4);
 
-        
+        list.forEach(System.out::println);
+
 
 
 
