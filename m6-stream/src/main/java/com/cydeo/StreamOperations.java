@@ -32,18 +32,19 @@ public class StreamOperations {
 
                 // Alternative writing
 
-        Stream<Integer> str=list.stream();
-
-                str.filter(i->i%2==0)
+        Stream<Integer> str = list.stream()
+                .filter(i -> i%2==0)
                 .distinct();
 
-                str.forEach(System.out::println);
+        str.forEach(System.out::println);
+
+        //LIMIT()-----------------------------------------
 
 
-
-
-
-
+        list.stream()
+                .filter(i -> i%2==0)
+                .limit(1)
+                .forEach(System.out::println);
 
     }
 }
