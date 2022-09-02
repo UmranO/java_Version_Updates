@@ -11,6 +11,10 @@ public class DishTask {
                 .forEach(System.out::println);
 
         //Print the length of the name of each dish
+        DishData.getAll().stream()
+                .map(Dish::getName)
+                .map(String::length)
+                .forEach(System.out::println);
 
 
         //Print three high caloric dish name (>300)
