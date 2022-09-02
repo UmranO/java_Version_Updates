@@ -48,10 +48,17 @@ public class StreamOperations {
 
         //SKIP()-----------------------------------------
 
-
         list.stream()
                 .filter(i -> i%2==0)
                 .skip(1)
                 .forEach(System.out::println);
+
+        //MAP()-----------------------------------------
+
+        list.stream()
+                .filter(i -> i%2==0)
+                .map(i->i*3)
+                .forEach(System.out::println);
+
     }
 }
