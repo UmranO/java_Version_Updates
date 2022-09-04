@@ -66,5 +66,7 @@ public class StreamOperations {
                 .filter(i->i%3==0)
                 .forEach(System.out::println);
 
+
+
     }
 }
