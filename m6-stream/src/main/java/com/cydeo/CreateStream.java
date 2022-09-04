@@ -7,12 +7,17 @@ import java.util.stream.Stream;
 public class CreateStream {
     public static void main(String[] args) {
 
+        //CREATING STREAM:
+
         //Creating Stream from Array
         String[] courses = {"Java","Spring","Agile"};
 
         Stream<String> courseStream = Arrays.stream(courses);
 
+        //----------------------------------------------------------------------
+
         //Creating Stream from Collection
+
         List<String> courseList = Arrays.asList("Java","Spring","Agile");
         Stream<String> courseStream2 = courseList.stream();
 
@@ -25,7 +30,10 @@ public class CreateStream {
         Stream<Course> myCourseStream = myCourses.stream();
 
         //Creating Stream Values
+
         Stream<Integer> stream = Stream.of(1,2,3,4);
+
+
     }
 
 }
