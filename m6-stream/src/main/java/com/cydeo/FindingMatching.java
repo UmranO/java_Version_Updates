@@ -4,6 +4,7 @@ import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
 
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 public class FindingMatching {
     public static void main(String[] args) {
@@ -41,5 +42,11 @@ public class FindingMatching {
         Optional<Dish> dish2=DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
         System.out.println(dish);
         System.out.println(dish2.get());
+
+        //PARALLEL STREAMS (Async)
+        System.out.println("-----------------------------------------------------------------");
+        System.out.println(IntStream.range(0,100).parallel().findAny());
+        System.out.println(IntStream.range(0,100).parallel().findFirst());
+
     }
 }
