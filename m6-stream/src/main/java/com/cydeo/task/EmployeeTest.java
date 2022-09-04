@@ -10,5 +10,16 @@ public class EmployeeTest {
                    .map(Employee::getEmpEmail)
                    .forEach(System.out::println);
 
+        //Print all employee Phone #s
+
+        EmployeeData.readAll()
+                //.map(Employee::getEmpPhoneNumbers)
+                .flatMap(employee->employee.getEmpPhoneNumbers().stream())
+                .forEach(System.out::println);
+
+
+
+
+
     }
 }
