@@ -35,5 +35,11 @@ public class FindingMatching {
         System.out.println(dish);
         System.out.println(dish.get());
 
+        //FIND FIRST
+        System.out.println("-----------------------------------------------------------------");
+        System.out.println("findFirst ()");
+        Optional<Dish> dish2=DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
+        System.out.println(dish);
+        System.out.println(dish2.get());
     }
 }
