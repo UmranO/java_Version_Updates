@@ -60,10 +60,23 @@ public class FindingMatching {
         System.out.println(findFirst);
         System.out.println(findAny);
 
+
+        //MIN
+        System.out.println("-----------------------------------------------------------------");
+        System.out.println("min ()");
         DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
         Optional dMin=DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
         System.out.println(dMin);
         System.out.println(dMin.get());
+
+        //MAX
+        System.out.println("-----------------------------------------------------------------");
+        System.out.println("max ()");
+        DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+        Optional dMax=DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+        System.out.println(dMax);
+        System.out.println(dMax.get());
+
 
     }
 }
