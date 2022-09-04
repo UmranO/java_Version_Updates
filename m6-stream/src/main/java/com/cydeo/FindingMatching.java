@@ -32,6 +32,7 @@ public class FindingMatching {
         System.out.println("-----------------------------------------------------------------");
         System.out.println("findAny ()");
         Optional<Dish> dish=DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
+        System.out.println(dish);
         System.out.println(dish.get());
 
     }
