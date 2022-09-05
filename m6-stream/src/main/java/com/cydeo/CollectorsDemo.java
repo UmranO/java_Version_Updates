@@ -2,6 +2,7 @@ package com.cydeo;
 
 import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
+import com.cydeo.task.Type;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -81,5 +82,10 @@ public class CollectorsDemo {
                 .collect(Collectors.partitioningBy(Dish::isVegetarian));
         System.out.println(veggieDish);
 
+        System.out.println("-----------groupingBy()----------");
+        System.out.println();
+        Map<Type,List<Dish>> dishType=DishData.getAll().stream()
+                .collect(Collectors.groupingBy(Dish::getType));
+        System.out.println(dishType);
     }
 }
