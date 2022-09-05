@@ -49,6 +49,16 @@ public class CollectorsDemo {
                 .collect(Collectors.toMap(Dish::getName,Dish::getCalories));
         System.out.println(numberMap);
 
-
+        System.out.println("-----------summingInt(ToIntFunction)----------");
+        System.out.println();
+        Integer sum=DishData.getAll().stream()
+                .collect(Collectors.summingInt(Dish::getCalories));
+        System.out.println(sum);
+        System.out.println("-----------counting()----------");
+        System.out.println();
+        Long evenCount=numbers.stream()
+                .filter(x->x%2==0)
+                .collect(Collectors.counting());
+        System.out.println(evenCount);
     }
 }
