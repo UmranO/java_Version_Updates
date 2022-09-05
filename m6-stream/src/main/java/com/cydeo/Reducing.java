@@ -33,6 +33,12 @@ public class Reducing {
                         .get();
         System.out.println(calorieSum);
 
+        System.out.println("------ALTERNATIVE------------------------- ");
+        Integer calorieSum1=DishData.getAll().stream()
+                .map(Dish::getCalories).reduce(Integer::sum)
+                .get();
+        System.out.println(calorieSum1);
+
         System.out.println("------MAX & MIN & SUM-------------------------- ");
         System.out.println();
         Optional<Integer> max=numbers.stream().reduce(Integer::max);
@@ -42,5 +48,9 @@ public class Reducing {
         Optional<Integer> sum1 =numbers.stream().reduce(Integer::sum);
         System.out.println("Sum: "+ sum1);
 
+        System.out.println("---------------COUNT----------------------------- ");
+        System.out.println();
+        long dishCount=DishData.getAll().stream().count();
+        System.out.println(dishCount);
     }
 }
