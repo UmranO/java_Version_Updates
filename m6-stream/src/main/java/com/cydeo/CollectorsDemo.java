@@ -32,5 +32,14 @@ public class CollectorsDemo {
                 .filter(p->p%2==0)
                 .collect(Collectors.toList());
         System.out.println(numberList2);
+
+        System.out.println("---------------Set--------------");
+        System.out.println();
+        Set<Integer> numberSet2=numbers.stream()
+                .filter(p->p%2==0)
+                .collect(Collectors.toSet());
+        System.out.println(numberSet2);
+
+
     }
 }
