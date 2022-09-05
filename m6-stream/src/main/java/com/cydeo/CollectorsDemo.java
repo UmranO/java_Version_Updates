@@ -54,11 +54,27 @@ public class CollectorsDemo {
         Integer sum=DishData.getAll().stream()
                 .collect(Collectors.summingInt(Dish::getCalories));
         System.out.println(sum);
+
         System.out.println("-----------counting()----------");
         System.out.println();
         Long evenCount=numbers.stream()
                 .filter(x->x%2==0)
                 .collect(Collectors.counting());
         System.out.println(evenCount);
+
+        System.out.println("-----------averagingInt()----------");
+        System.out.println();
+        Double calorieAverage=DishData.getAll().stream()
+                .collect(Collectors.averagingInt(Dish::getCalories));
+        System.out.println(calorieAverage);
+
+        System.out.println("-----------joining()----------");
+        System.out.println();
+        List<String> courses = Arrays.asList("Java","JS","TS");
+        String str=courses.stream()
+                .collect(Collectors.joining(","));
+        System.out.println(str);
+
+
     }
 }
