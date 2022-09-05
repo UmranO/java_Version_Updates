@@ -75,6 +75,11 @@ public class CollectorsDemo {
                 .collect(Collectors.joining(","));
         System.out.println(str);
 
+        System.out.println("-----------partitioningBy()----------");
+        System.out.println();
+        Map<Boolean,List<Dish>> veggieDish=DishData.getAll().stream()
+                .collect(Collectors.partitioningBy(Dish::isVegetarian));
+        System.out.println(veggieDish);
 
     }
 }
