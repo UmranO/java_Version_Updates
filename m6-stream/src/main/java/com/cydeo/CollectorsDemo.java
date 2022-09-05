@@ -25,5 +25,12 @@ public class CollectorsDemo {
                 .filter(p->p%2==0)
                 .collect(Collectors.toCollection(HashSet::new));
         System.out.println(numberSet);
+
+        System.out.println("---------------List--------------");
+        System.out.println();
+        List<Integer> numberList2=numbers.stream()
+                .filter(p->p%2==0)
+                .collect(Collectors.toList());
+        System.out.println(numberList2);
     }
 }
